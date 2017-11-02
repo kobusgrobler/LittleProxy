@@ -500,7 +500,7 @@ public class ClientToProxyConnection extends ProxyConnection<HttpRequest> {
             HttpResponse response = ProxyUtils.createFullHttpResponse(HttpVersion.HTTP_1_1,
                     CONNECTION_ESTABLISHED);
             response.headers().set(HttpHeaders.Names.CONNECTION, HttpHeaders.Values.KEEP_ALIVE);
-            ProxyUtils.addVia(response, proxyServer.getProxyAlias());
+            //ProxyUtils.addVia(response, proxyServer.getProxyAlias());
             return writeToChannel(response);
         };
     };
